@@ -1,7 +1,7 @@
 name: Generate Snake
 
 on:
-  schedule: 
+  schedule:
     - cron: "0 0 * * *"  # Runs at midnight every day
   workflow_dispatch:
 
@@ -22,5 +22,5 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "Generate snake animation"
-          branch: ${{ github.ref }}
+          branch: output
           file_pattern: dist/snake.svg
